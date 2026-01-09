@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Resposta recebida</title>
+</head>
+<body style="font-family:Arial, sans-serif; padding:20px; text-align:center;">
+  <h1 id="msg">Obrigado!</h1>
+  <p id="sub"></p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const r = params.get('resp');
+    if (r === 'sim') {
+      document.getElementById('msg').textContent = 'Oba! Você aceitou 🎉';
+      document.getElementById('sub').textContent = 'Vou combinar os detalhes do presente com você em breve!';
+    } else {
+      document.getElementById('msg').textContent = 'Tudo bem 😊';
+      document.getElementById('sub').textContent = 'Se mudar de ideia, o presente ainda estará te esperando!';
+    }
+  </script>
+</body>
+</html>
