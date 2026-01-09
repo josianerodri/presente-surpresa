@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Você ganhou um presente!</title>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f7f4ff; }
+    .card { text-align:center; padding:24px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); max-width:420px; background:white; }
+    button { font-size:18px; padding:12px 24px; margin:10px; border-radius:8px; cursor:pointer; border:none; }
+    button:first-child { background:#8a5cf5; color:white; }
+    button:last-child { background:#e0e0e0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎁 Você ganhou um presente surpresa!</h1>
+    <p>Quer aceitar e abrir agora?</p>
+    <div>
+      <button onclick="window.location.href='obrigado.html?resp=sim'">Sim</button>
+      <button onclick="window.location.href='obrigado.html?resp=nao'">Não</button>
+    </div>
+  </div>
+</body>
+</html>
