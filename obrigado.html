@@ -3,20 +3,59 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Resposta recebida</title>
+<title>💝 Resposta de Joãozinho</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4f1, #ffd0e3, #ffc8de);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: #444;
+  }
+  .box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 420px;
+    animation: fade 1s ease;
+  }
+  h1 {
+    color: #e75480;
+    font-size: 1.7em;
+  }
+  p {
+    font-size: 1.1em;
+    margin-top: 10px;
+  }
+  @keyframes fade {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
 </head>
-<body style="font-family:Arial, sans-serif; padding:20px; text-align:center;">
-  <h1 id="msg">Obrigado!</h1>
-  <p id="sub"></p>
+<body>
+  <div class="box">
+    <h1 id="msg"></h1>
+    <p id="sub"></p>
+  </div>
+
   <script>
     const params = new URLSearchParams(location.search);
     const r = params.get('resp');
+    const msg = document.getElementById('msg');
+    const sub = document.getElementById('sub');
+
     if (r === 'sim') {
-      document.getElementById('msg').textContent = 'Oba! Você aceitou 🎉';
-      document.getElementById('sub').textContent = 'Vou combinar os detalhes do presente com você em breve!';
+      msg.textContent = 'Aaaah, Joãozinho aceitou 💕';
+      sub.innerHTML = 'Se prepara, porque um <b>vale legalzinho</b> tá vindo aí...<br><br>✨ Pode ser um mimo, um momento ou algo que vai te arrancar um sorriso ✨';
     } else {
-      document.getElementById('msg').textContent = 'Tudo bem 😊';
-      document.getElementById('sub').textContent = 'Se mudar de ideia, o presente ainda estará te esperando!';
+      msg.textContent = 'Ah não, Joãozinho 😳';
+      sub.innerHTML = 'Você recusou um <b>vale legalzinho</b>?<br>Ele ainda vai estar aqui, esperando o momento certo 💌';
     }
   </script>
 </body>
